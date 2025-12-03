@@ -8,6 +8,8 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
+    "markdown-it-anchor": "^9.2.0",
+    "markdown-it-toc-done-right": "^4.2.0",
     "msw": "1",
     "vuepress": "^1.9.10"
   }

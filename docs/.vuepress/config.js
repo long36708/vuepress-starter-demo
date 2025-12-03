@@ -1,7 +1,7 @@
 /**
  * @Author: longmo
  * @Date: 2025-11-29 21:04:28
- * @LastEditTime: 2025-11-30 10:53:03
+ * @LastEditTime: 2025-12-03 21:52:12
  * @FilePath: docs/.vuepress/config.js
  * @Description:
  */
@@ -14,24 +14,64 @@ module.exports = {
     themeConfig: {
         // 导航栏配置
         nav: [
-            // { text: '首页', link: '/' },
-            // { text: '指南', link: '/guide/' },
+            { text: '首页', link: '/' },
+            { text: '指南', link: '/guide/' },
+            { 
+                text: '示例', 
+                items: [
+                    { text: 'TOC 插件示例', link: '/markdown-it-toc-example' }
+                ]
+            },
             { text: 'GitHub', link: 'https://github.com' }
         ],
         
         // 侧边栏配置
-        // sidebar: [
-        //     '/',
-        //     // '/guide/'
-        // ]
+        sidebar: {
+            '/guide/': [
+                {
+                    title: '指南',
+                    collapsable: false,
+                    children: [
+                        '/guide/',
+                        '/guide/getting-started',
+                        '/guide/configuration',
+                        '/guide/deployment'
+                    ]
+                }
+            ],
+            '/': [
+                {
+                    title: '文档',
+                    collapsable: false,
+                    children: [
+                        '/',
+                        '/markdown-it-toc-example'
+                    ]
+                }
+            ]
+        },
+        
+        // 侧边栏深度
+        sidebarDepth: 2,
+        
+        // 搜索功能
+        searchMaxSuggestions: 10,
+        
+        // 编辑链接
+        editLinks: true,
+        editLinkText: '在 GitHub 上编辑此页'
     },
     
     // 插件配置
     plugins: [
         'demo-container-v2.7',
     ],
-    // 客户端配置
-    clientRootMixin: require.resolve('./client-enhance.js'),
+    extendMarkdown: md => {
+        // 使用更多的 markdown-it 插件!
+        md.use(require('markdown-it-toc-done-right'))
+    }
+    // // 客户端配置
+    // clientRootMixin: require.resolve('./client-enhance.js'),
 
     // 添加 Webpack 配置处理 ES 模块
     // configureWebpack: (config, isServer) => {
