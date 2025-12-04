@@ -9,8 +9,20 @@
   },
   "dependencies": {
     "markdown-it-anchor": "^9.2.0",
+    "markdown-it-disable-url-encode": "^1.0.1",
     "markdown-it-toc-done-right": "^4.2.0",
     "msw": "1",
+    "vue-toasted": "^1.1.25",
+    "vuepress-plugin-flowchart": "^1.4.2",
+    "@vuepress/theme-vue": "1.9.10",
     "vuepress": "^1.9.10"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-active-header-links": "^1.9.10",
+    "@vuepress/plugin-back-to-top": "^1.9.10",
+    "vuepress-plugin-code-copy": "^1.0.6",
+    "vuepress-plugin-reading-time": "^0.1.1",
+    "vuepress-plugin-right-anchor": "^0.5.5",
+    "vuepress-plugin-side-anchor": "^1.0.6"
   }
 }

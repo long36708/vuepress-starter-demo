@@ -8,18 +8,49 @@ importers:
 
   .:
     dependencies:
+      '@vuepress/theme-vue':
+        specifier: 1.9.10
+        version: 1.9.10
       markdown-it-anchor:
         specifier: ^9.2.0
         version: 9.2.0(@types/markdown-it@10.0.3)(markdown-it@8.4.2)
+      markdown-it-disable-url-encode:
+        specifier: ^1.0.1
+        version: 1.0.1(mdurl@1.0.1)
       markdown-it-toc-done-right:
         specifier: ^4.2.0
         version: 4.2.0
       msw:
         specifier: '1'
         version: 1.3.5(@types/node@24.10.1)
+      vue-toasted:
+        specifier: ^1.1.25
+        version: 1.1.28
       vuepress:
         specifier: ^1.9.10
         version: 1.9.10(@vue/compiler-sfc@3.5.25)(hogan.js@3.0.2)(lodash@4.17.21)
+      vuepress-plugin-flowchart:
+        specifier: ^1.4.2
+        version: 1.5.0
+    devDependencies:
+      '@vuepress/plugin-active-header-links':
+        specifier: ^1.9.10
+        version: 1.9.10
+      '@vuepress/plugin-back-to-top':
+        specifier: ^1.9.10
+        version: 1.9.10
+      vuepress-plugin-code-copy:
+        specifier: ^1.0.6
+        version: 1.0.6
+      vuepress-plugin-reading-time:
+        specifier: ^0.1.1
+        version: 0.1.1
+      vuepress-plugin-right-anchor:
+        specifier: ^0.5.5
+        version: 0.5.5
+      vuepress-plugin-side-anchor:
+        specifier: ^1.0.6
+        version: 1.0.6
 
 packages:
 
@@ -823,6 +854,9 @@ packages:
   '@vuepress/plugin-active-header-links@1.9.10':
     resolution: {integrity: sha512-2dRr3DE2UBFXhyMtLR3sGTdRyDM8YStuY6AOoQmoSgwy1IHt7PO7ypOuf1akF+1Nv8Q2aISU06q6TExZouu3Mw==}
 
+  '@vuepress/plugin-back-to-top@1.9.10':
+    resolution: {integrity: sha512-iInIp66wu717CAnT2pyd9Bs/vAgrUBOBIQ7WMnfJo07cW/ZIothpyrSHnpCRSsfJ/jLivMPqW0pviqppt64BzQ==}
+
   '@vuepress/plugin-last-updated@1.9.10':
     resolution: {integrity: sha512-YxzWGF/OfU6WsHSynZFn74NGGp7dY27Bjy9JyyFo8wF5+2V1gpyDjveHKHGKugS/pMXlxfjzhv9E2Wmy9R7Iog==}
 
@@ -840,6 +874,9 @@ packages:
 
   '@vuepress/theme-default@1.9.10':
     resolution: {integrity: sha512-XnXn9t+pYCIhWi3cZXJlighuy93FFm5yXdISAAlFlcNkshuGtqamkjacHV8q/QZMfOhSIs6wX7Hj88u2IsT5mw==}
+
+  '@vuepress/theme-vue@1.9.10':
+    resolution: {integrity: sha512-XYIeitJqxaVvSJ7xiiegCpqWy93FkbS2vmPtc3OO+jz8hv3zHhZ0x2hzdelOtZdpB1jIIRLsb9acIHc08E6SzQ==}
 
   '@vuepress/types@1.9.10':
     resolution: {integrity: sha512-TDNQn4og85onmBpLTTXXmncW3rUnYGr2MkuI8OIFJZetDNM49t1WbjNVlrT+kx7C6qXi6okDQgrHGYXajHZWfg==}
@@ -2232,6 +2269,9 @@ packages:
     resolution: {integrity: sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==}
     engines: {node: '>= 0.6'}
 
+  eve-raphael@0.5.0:
+    resolution: {integrity: sha512-jrxnPsCGqng1UZuEp9DecX/AuSyAszATSjf4oEcRxvfxa1Oux4KkIPKBAAWWnpdwfARtr+Q0o9aPYWjsROD7ug==}
+
   eventemitter3@4.0.7:
     resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
 
@@ -2339,6 +2379,10 @@ packages:
   find-up@4.1.0:
     resolution: {integrity: sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==}
     engines: {node: '>=8'}
+
+  flowchart.js@1.18.0:
+    resolution: {integrity: sha512-1rZflSLyrj5/+ryzU+qIQr6IGysPIHT4UrgN+6IaVv7pLDSLu7CvC9e0X7FU6ocpRAEtHk5+UaFXv9NZKRoG3g==}
+    engines: {node: '>=4.0.0'}
 
   flush-write-stream@1.1.1:
     resolution: {integrity: sha512-3Z4XhFZ3992uIq0XOqb9AreonueSYphE6oYbpt5+3u06JWklbsPkNv3ZKkP9Bz/r+1MWCaMoSQ28P85+1Yc77w==}
@@ -3190,6 +3234,9 @@ packages:
   lodash.templatesettings@4.2.0:
     resolution: {integrity: sha512-stgLz+i3Aa9mZgnjr/O+v9ruKZsPsndy7qPZOchbqk2cnTU1ZaldKK+v7m54WoKIyxiuMZTKT2H81F8BeAc3ZQ==}
 
+  lodash.throttle@4.1.1:
+    resolution: {integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==}
+
   lodash.uniq@4.5.0:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
 
@@ -3259,6 +3306,11 @@ packages:
 
   markdown-it-container@2.0.0:
     resolution: {integrity: sha512-IxPOaq2LzrGuFGyYq80zaorXReh2ZHGFOB1/Hen429EJL1XkPI3FJTpx9TsJeua+j2qTru4h3W1TiCRdeivMmA==}
+
+  markdown-it-disable-url-encode@1.0.1:
+    resolution: {integrity: sha512-M/0GhhOzQcS8d2aFXF5SBSPjEmvfovkCgmVgZUm2B9nStEAVCb8bCfYVPaHNfem6M0TrBcdruF/PH1hKxwPIUw==}
+    peerDependencies:
+      mdurl: '*'
 
   markdown-it-emoji@1.4.0:
     resolution: {integrity: sha512-QCz3Hkd+r5gDYtS2xsFXmBYrgw6KuWcJZLCEkdfAuwzZbShCmCfta+hwAMq4NX/4xPzkSHduMKgMkkPUJxSXNg==}
@@ -4033,6 +4085,9 @@ packages:
     resolution: {integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==}
     engines: {node: '>= 0.6'}
 
+  raphael@2.3.0:
+    resolution: {integrity: sha512-w2yIenZAQnp257XUWGni4bLMVxpUpcIl7qgxEgDIXtmSypYtlNxfXWpOBxs7LBTps5sDwhRnrToJrMUrivqNTQ==}
+
   raw-body@2.5.3:
     resolution: {integrity: sha512-s4VSOf6yN0rvbRZGxs8Om5CWj6seneMwK3oDb4lWDH0UPhWcxwOWw5+qk24bxq87szX1ydrwylIOp2uG1ojUpA==}
     engines: {node: '>= 0.8'}
@@ -4055,6 +4110,9 @@ packages:
   readdirp@3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
     engines: {node: '>=8.10.0'}
+
+  reading-time@1.1.3:
+    resolution: {integrity: sha512-SYy+cuoGy1MTLjIbgwTZ+DkDiDq/dE1OnqBQFYytXgNWRZROuqtBdu7HoJ+HbGMnoAinOHnHnqbEUYnpSho5aA==}
 
   reduce@1.0.3:
     resolution: {integrity: sha512-0Dtt3Bgj34/yKFzE5N9V6/HYyP3gb+E3TLs/hMr/wGgkCIzYa+7G4hNrE/P+en52OJT+pLUgmba9DQF3AB+2LQ==}
@@ -4897,6 +4955,9 @@ packages:
   vue-template-es2015-compiler@1.9.1:
     resolution: {integrity: sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==}
 
+  vue-toasted@1.1.28:
+    resolution: {integrity: sha512-UUzr5LX51UbbiROSGZ49GOgSzFxaMHK6L00JV8fir/CYNJCpIIvNZ5YmS4Qc8Y2+Z/4VVYRpeQL2UO0G800Raw==}
+
   vue@2.7.16:
     resolution: {integrity: sha512-4gCtFXaAA3zYZdTp5s4Hl2sozuySsgz4jy1EnpBHNfpMa9dK1ZCG7viqBPCwXtmgc8nHqUsAu3G4gtmXkkY3Sw==}
     deprecated: Vue 2 has reached EOL and is no longer actively maintained. See https://v2.vuejs.org/eol/ for more details.
@@ -4907,8 +4968,23 @@ packages:
     peerDependencies:
       webpack: ^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0
 
+  vuepress-plugin-code-copy@1.0.6:
+    resolution: {integrity: sha512-FiqwMtlb4rEsOI56O6sSkekcd3SlESxbkR2IaTIQxsMOMoalKfW5R9WlR1Pjm10v6jmU661Ex8MR11k9IzrNUg==}
+
   vuepress-plugin-container@2.1.5:
     resolution: {integrity: sha512-TQrDX/v+WHOihj3jpilVnjXu9RcTm6m8tzljNJwYhxnJUW0WWQ0hFLcDTqTBwgKIFdEiSxVOmYE+bJX/sq46MA==}
+
+  vuepress-plugin-flowchart@1.5.0:
+    resolution: {integrity: sha512-mmLstal1v/S2h22wBYR51XIweqR2AMbQ+kDO44GswqtVfXODhfJLZX2D2oPwnx6x0lRMRkbnKUE8OVllcCizvg==}
+
+  vuepress-plugin-reading-time@0.1.1:
+    resolution: {integrity: sha512-j94utmn4nojYWyOVqfUF3eLWOMTAmZpR0G1gUlmast6KFu/VLevJvxFgJfa6DVaSlTpUH1DMLYspcjLv5pHhDw==}
+
+  vuepress-plugin-right-anchor@0.5.5:
+    resolution: {integrity: sha512-C/zKeCw8Zzcd62DSGyiOwG6gOE9//VY5lPFPXxh1N/kJ2ICoCLNKBTFk2L9oDRgpWVc1TXk4HDqT+wxqz7MgmQ==}
+
+  vuepress-plugin-side-anchor@1.0.6:
+    resolution: {integrity: sha512-oITsvBimHDDlKnAtqXFgTyYRMonjVWzR+4aZ2Dx54a4hMrWiXV0e23RTrh/zBzs8hH1QlO5sf/+P734+tfZfjw==}
 
   vuepress-plugin-smooth-scroll@0.0.3:
     resolution: {integrity: sha512-qsQkDftLVFLe8BiviIHaLV0Ea38YLZKKonDGsNQy1IE0wllFpFIEldWD8frWZtDFdx6b/O3KDMgVQ0qp5NjJCg==}
@@ -6361,6 +6437,13 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
+  '@vuepress/plugin-back-to-top@1.9.10':
+    dependencies:
+      '@vuepress/types': 1.9.10
+      lodash.debounce: 4.0.8
+    transitivePeerDependencies:
+      - debug
+
   '@vuepress/plugin-last-updated@1.9.10':
     dependencies:
       '@vuepress/types': 1.9.10
@@ -6415,6 +6498,13 @@ snapshots:
       stylus-loader: 3.0.2(stylus@0.54.8)
       vuepress-plugin-container: 2.1.5
       vuepress-plugin-smooth-scroll: 0.0.3
+    transitivePeerDependencies:
+      - debug
+      - supports-color
+
+  '@vuepress/theme-vue@1.9.10':
+    dependencies:
+      '@vuepress/theme-default': 1.9.10
     transitivePeerDependencies:
       - debug
       - supports-color
@@ -7935,6 +8025,8 @@ snapshots:
 
   etag@1.8.1: {}
 
+  eve-raphael@0.5.0: {}
+
   eventemitter3@4.0.7: {}
 
   events@1.1.1: {}
@@ -8109,6 +8201,10 @@ snapshots:
     dependencies:
       locate-path: 5.0.0
       path-exists: 4.0.0
+
+  flowchart.js@1.18.0:
+    dependencies:
+      raphael: 2.3.0
 
   flush-write-stream@1.1.1:
     dependencies:
@@ -8984,6 +9080,8 @@ snapshots:
     dependencies:
       lodash._reinterpolate: 3.0.0
 
+  lodash.throttle@4.1.1: {}
+
   lodash.uniq@4.5.0: {}
 
   lodash@4.17.21: {}
@@ -9044,6 +9142,10 @@ snapshots:
       webpack-chain: 4.12.1
 
   markdown-it-container@2.0.0: {}
+
+  markdown-it-disable-url-encode@1.0.1(mdurl@1.0.1):
+    dependencies:
+      mdurl: 1.0.1
 
   markdown-it-emoji@1.4.0: {}
 
@@ -9903,6 +10005,10 @@ snapshots:
 
   range-parser@1.2.1: {}
 
+  raphael@2.3.0:
+    dependencies:
+      eve-raphael: 0.5.0
+
   raw-body@2.5.3:
     dependencies:
       bytes: 3.1.2
@@ -9944,6 +10050,8 @@ snapshots:
   readdirp@3.6.0:
     dependencies:
       picomatch: 2.3.1
+
+  reading-time@1.1.3: {}
 
   reduce@1.0.3:
     dependencies:
@@ -11011,6 +11119,8 @@ snapshots:
 
   vue-template-es2015-compiler@1.9.1: {}
 
+  vue-toasted@1.1.28: {}
+
   vue@2.7.16:
     dependencies:
       '@vue/compiler-sfc': 2.7.16
@@ -11027,12 +11137,28 @@ snapshots:
       util.promisify: 1.0.0
       webpack: 4.47.0
 
+  vuepress-plugin-code-copy@1.0.6: {}
+
   vuepress-plugin-container@2.1.5:
     dependencies:
       '@vuepress/shared-utils': 1.9.10
       markdown-it-container: 2.0.0
     transitivePeerDependencies:
       - supports-color
+
+  vuepress-plugin-flowchart@1.5.0:
+    dependencies:
+      flowchart.js: 1.18.0
+
+  vuepress-plugin-reading-time@0.1.1:
+    dependencies:
+      reading-time: 1.1.3
+
+  vuepress-plugin-right-anchor@0.5.5:
+    dependencies:
+      lodash.throttle: 4.1.1
+
+  vuepress-plugin-side-anchor@1.0.6: {}
 
   vuepress-plugin-smooth-scroll@0.0.3:
     dependencies:

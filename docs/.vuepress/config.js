@@ -1,30 +1,31 @@
 /**
  * @Author: longmo
  * @Date: 2025-11-29 21:04:28
- * @LastEditTime: 2025-12-03 21:52:12
+ * @LastEditTime: 2025-12-05 00:23:48
  * @FilePath: docs/.vuepress/config.js
  * @Description:
  */
+const {NavItems} = require('./config/nav')
 module.exports = {
     title: 'Hello VuePress',
     description: 'Just playing around',
     cache: false,
-    
+    dest: '../../dist',
     // 主题配置
     themeConfig: {
         // 导航栏配置
-        nav: [
-            { text: '首页', link: '/' },
-            { text: '指南', link: '/guide/' },
-            { 
-                text: '示例', 
-                items: [
-                    { text: 'TOC 插件示例', link: '/markdown-it-toc-example' }
-                ]
+        nav: NavItems,
+        locales: {
+            '/': {
+                label: '简体中文',
+                selectText: '选择语言',
+                ariaLabel: '选择语言',
+                editLinkText: '在 GitHub 上编辑此页',
+                lastUpdated: '上次更新',
+                nav: NavItems,
+                // sidebar: Sidebar4EN
             },
-            { text: 'GitHub', link: 'https://github.com' }
-        ],
-        
+        },
         // 侧边栏配置
         sidebar: {
             '/guide/': [
@@ -50,26 +51,44 @@ module.exports = {
                 }
             ]
         },
-        
+
         // 侧边栏深度
         sidebarDepth: 2,
-        
+
         // 搜索功能
         searchMaxSuggestions: 10,
-        
+
         // 编辑链接
         editLinks: true,
         editLinkText: '在 GitHub 上编辑此页'
     },
-    
-    // 插件配置
+    smoothScroll: true,
+    // 插件配置 
     plugins: [
         'demo-container-v2.7',
+        '@vuepress/back-to-top',
+        // ['vuepress-plugin-side-anchor'], // 右侧添加侧边锚点
+        ['vuepress-plugin-right-anchor'],
+        // '@vuepress/active-header-links'
+        ['vuepress-plugin-code-copy', {
+            selector: 'div[class*="language-"] pre',
+            align: 'top',
+            color: '#27b1ff',
+            backgroundTransition: true,
+            backgroundColor: '#0075b8',
+            successText: 'Copied!'
+        }],
+        ['vuepress-plugin-reading-time', {excludes: ['/about', '/tag/.*']}],
     ],
     extendMarkdown: md => {
         // 使用更多的 markdown-it 插件!
-        md.use(require('markdown-it-toc-done-right'))
-    }
+        // md.use(require('markdown-it-toc-done-right'))
+        // md.use(require('markdown-it-disable-url-encode'));
+    },
+    extraWatchFiles: [
+        '.vuepress/nav.js',
+        '.vuepress/config/**'
+    ]
     // // 客户端配置
     // clientRootMixin: require.resolve('./client-enhance.js'),
 
@@ -109,3 +128,4 @@ module.exports = {
     //         .type('javascript/auto');
     // }
 }
+
