@@ -1,11 +1,12 @@
 /**
  * @Author: longmo
  * @Date: 2025-11-29 21:04:28
- * @LastEditTime: 2025-12-05 00:23:48
+ * @LastEditTime: 2025-12-05 00:33:49
  * @FilePath: docs/.vuepress/config.js
  * @Description:
  */
 const {NavItems} = require('./config/nav')
+const {getGuideSidebar, getExampleSidebar} = require("./config/sidebar");
 module.exports = {
     title: 'Hello VuePress',
     description: 'Just playing around',
@@ -15,41 +16,21 @@ module.exports = {
     themeConfig: {
         // 导航栏配置
         nav: NavItems,
-        locales: {
-            '/': {
-                label: '简体中文',
-                selectText: '选择语言',
-                ariaLabel: '选择语言',
-                editLinkText: '在 GitHub 上编辑此页',
-                lastUpdated: '上次更新',
-                nav: NavItems,
-                // sidebar: Sidebar4EN
-            },
-        },
+        // locales: {
+        //     '/': {
+        //         label: '简体中文',
+        //         selectText: '选择语言',
+        //         ariaLabel: '选择语言',
+        //         editLinkText: '在 GitHub 上编辑此页',
+        //         lastUpdated: '上次更新',
+        //         nav: NavItems,
+        //         // sidebar: Sidebar4EN
+        //     },
+        // },
         // 侧边栏配置
         sidebar: {
-            '/guide/': [
-                {
-                    title: '指南',
-                    collapsable: false,
-                    children: [
-                        '/guide/',
-                        '/guide/getting-started',
-                        '/guide/configuration',
-                        '/guide/deployment'
-                    ]
-                }
-            ],
-            '/': [
-                {
-                    title: '文档',
-                    collapsable: false,
-                    children: [
-                        '/',
-                        '/markdown-it-toc-example'
-                    ]
-                }
-            ]
+            '/': getExampleSidebar(),
+            '/guide/': getGuideSidebar(),
         },
 
         // 侧边栏深度
